@@ -1,0 +1,311 @@
+.love-letter-app {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.letter-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.letter-container.with-editor .letter-template {
+  width: 60%;
+  padding-right: 20px;
+}
+
+.letter-template {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.editor-panel {
+  width: 40%;
+  padding: 20px;
+  background-color: #fff9f9;
+  border-left: 1px solid #ffd6d6;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.editor-panel h3 {
+  color: #d14d4d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #d14d4d;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ffb6b6;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+.letter-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.print-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.download-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.love-letter {
+  position: relative;
+  background-color: #fff9f9;
+  border: 1px solid #ffd6d6;
+  padding: 40px;
+  min-height: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.corner-decoration {
+  position: absolute;
+  font-size: 24px;
+  color: #ff6b6b;
+}
+
+.top-left { top: 10px; left: 10px; }
+.top-right { top: 10px; right: 10px; }
+.bottom-left { bottom: 10px; left: 10px; }
+.bottom-right { bottom: 10px; right: 10px; }
+
+.letter-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.receiver, .sender {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  color: #d14d4d;
+  margin-bottom: 5px;
+}
+
+.display-field {
+  font-weight: bold;
+  color: #d14d4d;
+  padding: 5px 0;
+}
+
+.letter-content {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.seal-decoration {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: #ffebeb;
+  border: 2px solid #ff6b6b;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.heart-divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #ff6b6b;
+  letter-spacing: 10px;
+}
+
+.message-display {
+  white-space: pre-line;
+  line-height: 1.6;
+  padding: 10px;
+  background-color: #fffefc;
+  border: 1px dashed #ffb6b6;
+  border-radius: 4px;
+}
+
+.date span {
+  font-weight: bold;
+  color: #555;
+}
+
+@media print {
+  .letter-controls, .editor-panel {
+    display: none;
+  }
+  
+  .letter-template {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .letter-container {
+    flex-direction: column;
+  }
+  
+  .letter-container.with-editor .letter-template,
+  .editor-panel {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .editor-panel {
+    border-left: none;
+    border-top: 1px solid #ffd6d6;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+}
+/* Add these styles to your existing CSS */
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.whatsapp-btn:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.whatsapp-icon {
+  font-size: 18px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.edit-btn,
+.print-btn,
+.download-btn,
+.whatsapp-btn {
+  min-width: 140px;
+  justify-content: center;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Loading indicator */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.whatsapp-btn:disabled .whatsapp-icon {
+  animation: spin 1s linear infinite;
+}
+
+/* Ensure PDF looks good */
+@media print {
+  .button-group {
+    display: none;
+  }
+  
+  .love-letter {
+    background-color: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  .corner-decoration,
+  .seal-decoration {
+    display: none;
+  }
+}

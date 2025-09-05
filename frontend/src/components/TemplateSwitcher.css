@@ -1,0 +1,53 @@
+/* TemplateSwitcher.css */
+.template-switcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.template-display {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.template-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.nav-button {
+  background: #ff6b8b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(255, 107, 139, 0.3);
+}
+
+.nav-button:hover {
+  background: #ff4757;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 107, 139, 0.4);
+}
+
+.template-name {
+  font-size: 18px;
+  color: #555;
+  font-weight: 500;
+  min-width: 150px;
+  text-align: center;
+}

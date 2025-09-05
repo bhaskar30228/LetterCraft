@@ -1,0 +1,363 @@
+/* Event Invitation Styles */
+.ei-app {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff9f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Font Awesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* Modern font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Controls Styling */
+.ei-controls {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.ei-controls h2 {
+  margin: 0;
+  color: #e74c3c;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.ei-button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.ei-edit-btn, .ei-print-btn, .ei-download-btn, .ei-whatsapp-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.ei-edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.ei-print-btn {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.ei-download-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.ei-whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+}
+
+.ei-button-group button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.ei-button-group button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Main Container */
+.ei-container {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.ei-with-editor .ei-template {
+  flex: 2;
+}
+
+/* Template Content */
+.ei-template {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  background: white;
+  min-height: 11in;
+}
+
+/* Header */
+.ei-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #e74c3c, #f39c12);
+  color: white;
+  position: relative;
+}
+
+.ei-decoration {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ei-decoration::before {
+  content: "★";
+  color: white;
+  font-size: 20px;
+}
+
+.ei-main-title {
+  text-align: center;
+  flex: 1;
+}
+
+.ei-invitation-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.ei-event-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.ei-hosted-by {
+  font-size: 16px;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Content */
+.ei-content {
+  padding: 30px;
+}
+
+.ei-date-location {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.ei-date, .ei-location {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ei-date i, .ei-location i {
+  margin-right: 10px;
+  color: #e74c3c;
+}
+
+.ei-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.ei-detail-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #e74c3c;
+}
+
+.ei-detail-item h3 {
+  color: #e74c3c;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.ei-detail-item p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.ei-closing {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #e74c3c;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+/* Editor Panel */
+.ei-editor-panel {
+  width: 40%;
+  padding: 25px;
+  background: #f9f9f9;
+  border-left: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.ei-editor-panel h3 {
+  color: #e74c3c;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ei-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.ei-form-group {
+  margin-bottom: 15px;
+}
+
+.ei-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.ei-form-group input,
+.ei-form-group select,
+.ei-form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.ei-form-group input:focus,
+.ei-form-group select:focus,
+.ei-form-group textarea:focus {
+  outline: none;
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.ei-form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.ei-form-group select {
+  height: 40px;
+}
+
+/* Print Styles */
+@media print {
+  .ei-no-print {
+    display: none !important;
+  }
+
+  .ei-app {
+    padding: 0;
+    background: white !important;
+  }
+
+  .ei-container {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .ei-template {
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .ei-header {
+    background: #e74c3c !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .ei-invitation-title {
+    font-size: 24pt !important;
+  }
+
+  .ei-event-title {
+    font-size: 18pt !important;
+  }
+
+  .ei-date, .ei-location {
+    font-size: 14pt !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .ei-container {
+    flex-direction: column;
+  }
+
+  .ei-template, .ei-editor-panel {
+    width: 100% !important;
+  }
+
+  .ei-editor-panel {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+@media (max-width: 768px) {
+  .ei-details {
+    grid-template-columns: 1fr;
+  }
+
+  .ei-button-group {
+    flex-direction: column;
+  }
+
+  .ei-button-group button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ei-app {
+    padding: 10px;
+  }
+
+  .ei-header {
+    padding: 20px 10px;
+  }
+
+  .ei-content {
+    padding: 20px;
+  }
+
+  .ei-editor-panel {
+    padding: 15px;
+  }
+}

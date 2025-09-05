@@ -1,0 +1,438 @@
+/* VintageLetter.css */
+.vintage-app {
+  font-family: 'Courier New', monospace;
+  color: #5a4a42;
+}
+
+.vintage-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  background-color: #f5f1e6;
+  padding: 20px;
+}
+
+.vintage-container.with-editor .vintage-template {
+  width: 60%;
+  padding-right: 20px;
+}
+
+.vintage-template {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.vintage-editor-panel {
+  width: 40%;
+  padding: 20px;
+  background-color: #fff9e6;
+  border-left: 1px solid #d4a76a;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.vintage-editor-panel h3 {
+  color: #8c7b6b;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Courier New', monospace;
+}
+
+.vintage-form-group {
+  margin-bottom: 15px;
+}
+
+.vintage-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #8c7b6b;
+}
+
+.vintage-input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #d4a76a;
+  background: transparent;
+  font-family: 'Courier New', monospace;
+  color: #5a4a42;
+}
+
+.vintage-input:focus {
+  outline: none;
+  border-bottom: 1px solid #8c7b6b;
+}
+
+.vintage-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d4a76a;
+  background: transparent;
+  font-family: 'Courier New', monospace;
+  color: #5a4a42;
+  min-height: 200px;
+  resize: vertical;
+}
+
+.vintage-textarea:focus {
+  outline: none;
+  border: 1px solid #8c7b6b;
+}
+
+.vintage-save-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #8c7b6b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+.vintage-save-btn:hover {
+  background-color: #5a4a42;
+}
+
+.vintage-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.vintage-button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.vintage-edit-btn, .vintage-print-btn, .vintage-download-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-family: 'Courier New', monospace;
+}
+
+.vintage-edit-btn {
+  background-color: #8c7b6b;
+  color: white;
+}
+
+.vintage-print-btn {
+  background-color: #5a4a42;
+  color: white;
+}
+
+.vintage-download-btn {
+  background-color: #d4a76a;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.vintage-letter {
+  position: relative;
+  background-color: #fff9e6;
+  background-image: linear-gradient(#e8e0cb 1px, transparent 1px);
+  background-size: 100% 24px;
+  border: 12px solid transparent;
+  border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23d4a76a" stroke-width="4" stroke-dasharray="10,6" rx="10" ry="10"/></svg>') 12;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  min-height: 500px;
+}
+
+.vintage-letter:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23d4a76a" stroke-width="0.5" stroke-dasharray="2,2" rx="10" ry="10"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.vintage-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d4a76a;
+  padding-bottom: 10px;
+}
+
+.vintage-receiver, .vintage-sender {
+  display: flex;
+  align-items: center;
+}
+
+.vintage-date {
+  color: #8c7b6b;
+  font-size: 14px;
+  align-self: flex-end;
+}
+
+.vintage-label {
+  color: #8c7b6b;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.vintage-display {
+  font-weight: bold;
+  color: #5a4a42;
+}
+
+.vintage-content {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.quill-ink {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background: #5a4a42;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  opacity: 0.8;
+}
+
+.vintage-message-display {
+  white-space: pre-line;
+  line-height: 24px;
+  padding: 10px;
+  background-color: #fffefc;
+  border: 1px dashed #d4a76a;
+}
+
+.vintage-divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #8c7b6b;
+  letter-spacing: 10px;
+}
+
+.vintage-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  border-top: 1px solid #d4a76a;
+  padding-top: 20px;
+  position: relative;
+}
+
+.wax-seal {
+  width: 50px;
+  height: 50px;
+  background: #c0392b;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.wax-seal:before {
+  content: "❤";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+}
+
+.wax-seal:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid #c0392b;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+@media print {
+  .vintage-controls, .vintage-editor-panel {
+    display: none;
+  }
+  
+  .vintage-template {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .vintage-container {
+    flex-direction: column;
+  }
+  
+  .vintage-container.with-editor .vintage-template,
+  .vintage-editor-panel {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .vintage-editor-panel {
+    border-left: none;
+    border-top: 1px solid #d4a76a;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+}
+
+/* Add these styles to your existing CSS */
+
+.vintage-whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+}
+
+.vintage-whatsapp-btn:hover {
+  background-color: #128C7E;
+}
+
+.vintage-whatsapp-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.vintage-whatsapp-icon {
+  font-size: 18px;
+}
+
+.vintage-button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Ensure buttons stay aligned properly */
+.vintage-edit-btn,
+.vintage-print-btn,
+.vintage-download-btn,
+.vintage-whatsapp-btn {
+  min-width: 100px;
+  justify-content: center;
+}
+
+/* Loading indicator */
+@keyframes vintage-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.vintage-whatsapp-btn:disabled .vintage-whatsapp-icon {
+  animation: vintage-spin 1s linear infinite;
+}
+
+/* Add these styles to your existing CSS */
+
+.vintage-whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  min-width: 160px;
+}
+
+.vintage-whatsapp-btn:hover {
+  background-color: #128C7E;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.vintage-whatsapp-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.vintage-whatsapp-icon {
+  font-size: 18px;
+}
+
+.vintage-button-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vintage-edit-btn,
+.vintage-print-btn,
+.vintage-download-btn,
+.vintage-whatsapp-btn {
+  min-width: 140px;
+  justify-content: center;
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  padding: 10px 15px;
+  border: 1px solid #d4af37;
+  transition: all 0.3s ease;
+}
+
+.vintage-download-btn {
+  background-color: #8b4513;
+  color: white;
+}
+
+.vintage-download-btn:hover {
+  background-color: #a0522d;
+}
+
+/* Loading indicator */
+@keyframes vintage-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.vintage-whatsapp-btn:disabled .vintage-whatsapp-icon {
+  animation: vintage-spin 1s linear infinite;
+}
+
+/* Ensure PDF looks good */
+@media print {
+  .vintage-button-group {
+    display: none;
+  }
+  
+  .vintage-letter {
+    background-color: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}

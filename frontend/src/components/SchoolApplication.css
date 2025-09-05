@@ -1,0 +1,376 @@
+/* School Application Letter Styles */
+.sa-app {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Font Awesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* Controls Styling */
+.sa-controls {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-left: 5px solid #4CAF50;
+}
+
+.sa-controls h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sa-button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.sa-edit-btn, .sa-print-btn, .sa-download-btn, .sa-whatsapp-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.sa-edit-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.sa-print-btn {
+  background-color: #607D8B;
+  color: white;
+}
+
+.sa-download-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sa-whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+}
+
+.sa-button-group button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.sa-button-group button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Main Container */
+.sa-container {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.sa-with-editor .sa-template {
+  flex: 2;
+}
+
+/* Template Content */
+.sa-template {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  background: white;
+  min-height: 11in;
+}
+
+/* Header */
+.sa-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.sa-sender-info {
+  flex: 1;
+}
+
+.sa-school-header {
+  margin-bottom: 15px;
+}
+
+.sa-school-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+}
+
+.sa-school-motto {
+  color: #4CAF50;
+  font-style: italic;
+  margin: 0;
+  font-size: 14px;
+}
+
+.sa-student-info {
+  margin-top: 20px;
+}
+
+.sa-student-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+}
+
+.sa-contact-info {
+  color: #555;
+  font-size: 14px;
+  margin: 0;
+}
+
+.sa-logo-placeholder {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sa-logo-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #4CAF50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Letter Content */
+.sa-content {
+  line-height: 1.6;
+}
+
+.sa-date {
+  text-align: right;
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.sa-recipient-info {
+  margin-bottom: 20px;
+}
+
+.sa-recipient-info p {
+  margin: 5px 0;
+  color: #2c3e50;
+}
+
+.sa-salutation {
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.sa-body {
+  font-size: 15px;
+}
+
+.sa-body p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.sa-sign-off {
+  margin-top: 50px;
+}
+
+.sa-signature-line {
+  width: 200px;
+  height: 1px;
+  background: #4CAF50;
+  margin: 5px 0 15px 0;
+}
+
+.sa-parent-name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.sa-relation {
+  color: #555;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+/* Editor Panel */
+.sa-editor-panel {
+  width: 40%;
+  padding: 25px;
+  background: #f5f5f5;
+  border-left: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sa-editor-panel h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sa-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.sa-form-group {
+  margin-bottom: 15px;
+}
+
+.sa-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.sa-form-group input,
+.sa-form-group select,
+.sa-form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.sa-form-group input:focus,
+.sa-form-group select:focus,
+.sa-form-group textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.sa-form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.sa-form-group select {
+  height: 40px;
+}
+
+/* Print Styles */
+@media print {
+  .sa-no-print {
+    display: none !important;
+  }
+
+  .sa-app {
+    padding: 0;
+    background: white !important;
+  }
+
+  .sa-container {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .sa-template {
+    padding: 20mm !important;
+    box-shadow: none !important;
+  }
+
+  .sa-school-name {
+    font-size: 20pt !important;
+  }
+
+  .sa-student-name {
+    font-size: 16pt !important;
+  }
+
+  .sa-body, .sa-recipient-info p, .sa-salutation {
+    font-size: 12pt !important;
+  }
+
+  .sa-body p {
+    margin-bottom: 12pt !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .sa-container {
+    flex-direction: column;
+  }
+
+  .sa-template, .sa-editor-panel {
+    width: 100% !important;
+  }
+
+  .sa-editor-panel {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sa-header {
+    flex-direction: column;
+  }
+
+  .sa-logo-placeholder {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+
+  .sa-button-group {
+    flex-direction: column;
+  }
+
+  .sa-button-group button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sa-app {
+    padding: 10px;
+  }
+
+  .sa-template {
+    padding: 20px !important;
+  }
+
+  .sa-editor-panel {
+    padding: 20px !important;
+  }
+}

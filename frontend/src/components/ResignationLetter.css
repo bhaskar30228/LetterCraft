@@ -1,0 +1,363 @@
+/* Resignation Letter Styles - Matching Cover Letter Style */
+.rl-app {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: #2c3e50;
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Controls Styling */
+.rl-controls {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.rl-controls h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.rl-button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.rl-edit-btn, .rl-print-btn, .rl-download-btn, .rl-whatsapp-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.rl-edit-btn {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+.rl-print-btn {
+  background-color: #0984e3;
+  color: white;
+}
+
+.rl-download-btn {
+  background-color: #00b894;
+  color: white;
+}
+
+.rl-whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+}
+
+.rl-button-group button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.rl-button-group button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Main Container */
+.rl-container {
+  display: flex;
+  transition: all 0.3s ease;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+  min-height: calc(100vh - 160px);
+}
+
+.rl-with-editor .rl-template {
+  flex: 2;
+}
+
+/* Template Content */
+.rl-template {
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  background: white;
+  min-height: 11in; /* Standard letter height */
+}
+
+.rl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.rl-sender-info {
+  flex: 1;
+}
+
+.rl-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+}
+
+.rl-contact-info {
+  color: #7f8c8d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.rl-logo-placeholder {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rl-logo-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  opacity: 0.8;
+}
+
+/* Letter Content */
+.rl-content {
+  flex: 1;
+}
+
+.rl-date {
+  text-align: right;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.rl-recipient-info p {
+  margin: 5px 0;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.rl-salutation {
+  margin: 25px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.rl-body {
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.rl-body p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.rl-sign-off {
+  margin-top: 60px;
+}
+
+.rl-signature-line {
+  width: 200px;
+  height: 1px;
+  background: #bdc3c7;
+  margin: 5px 0 15px 0;
+}
+
+/* Editor Panel */
+.rl-editor-panel {
+  width: 40%;
+  padding: 40px;
+  background: #f8f9fa;
+  border-left: 1px solid #eee;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.rl-editor-panel h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.rl-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.rl-form-group {
+  margin-bottom: 15px;
+}
+
+.rl-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.rl-form-group input,
+.rl-form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.rl-form-group input:focus,
+.rl-form-group textarea:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.rl-form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* PDF/Print Specific Styles */
+@media print {
+  body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .rl-no-print, .rl-editor-panel, .rl-controls {
+    display: none !important;
+  }
+  
+  .rl-container {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    min-height: auto !important;
+  }
+  
+  .rl-template {
+    padding: 20mm !important;
+    width: 100% !important;
+    min-height: auto !important;
+    box-shadow: none !important;
+  }
+  
+  .rl-name {
+    font-size: 24pt !important;
+  }
+  
+  .rl-contact-info, .rl-date {
+    font-size: 10pt !important;
+  }
+  
+  .rl-body, .rl-recipient-info p, .rl-salutation {
+    font-size: 12pt !important;
+  }
+  
+  .rl-body p {
+    margin-bottom: 12pt !important;
+    line-height: 1.5 !important;
+  }
+  
+  * {
+    color: #000 !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .rl-container {
+    flex-direction: column;
+  }
+  
+  .rl-template, .rl-editor-panel {
+    width: 100% !important;
+  }
+  
+  .rl-editor-panel {
+    border-left: none;
+    border-top: 1px solid #eee;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rl-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .rl-logo-placeholder {
+    align-self: flex-start;
+  }
+  
+  .rl-button-group {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .rl-edit-btn, .rl-print-btn, .rl-download-btn, .rl-whatsapp-btn {
+    flex: 1;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .rl-app {
+    padding: 10px;
+  }
+  
+  .rl-template {
+    padding: 25px;
+  }
+  
+  .rl-editor-panel {
+    padding: 20px;
+  }
+  
+  .rl-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
