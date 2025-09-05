@@ -40,7 +40,7 @@ const SignPage = () => {
       password: formData.password,
     };
 
-    await axios.post(`http://localhost:5000/auth/${endpoint}`, data).
+    await axios.post(`${import.meta.env.VITE_BACKEND||"http://localhost:5000"}/auth/${endpoint}`, data).
     then((response) => {
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
