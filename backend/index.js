@@ -11,7 +11,7 @@ app.use(cors());
 app.get('/',(req,res)=>{
     res.send("Hello")
 })
-const allowedOrigins = ['https://letter-craft-beta.vercel.app/', 'http://localhost:5173'];
+const allowedOrigins = ['https://letter-craft-beta.vercel.app', 'http://localhost:5173'];
 
 app.use(cors({
   origin: function (origin, callback) {

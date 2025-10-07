@@ -109,7 +109,7 @@ const SignPage = () => {
             <label htmlFor="email">Email Address</label>
             <input
               type="email"
-              id="email"
+              id={isLoginForm ? "login-email" : "signup-email"} 
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -122,7 +122,7 @@ const SignPage = () => {
             <label htmlFor="password">Password</label>
             <input
               type="password"
-              id="password"
+              id={isLoginForm ? "login-password" : "signup-password"} 
               name="password"
               value={formData.password}
               onChange={handleChange}
