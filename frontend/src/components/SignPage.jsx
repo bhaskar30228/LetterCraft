@@ -7,7 +7,7 @@ import axios from "axios";
 const SignPage = () => {
   const navigate = useNavigate();
   const { open, setOpen, isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
-  const [isLoginForm, setIsLoginForm] = useState(true);
+  const [isLoginForm, setIsLoginForm ] = useState(true);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
